@@ -107,3 +107,7 @@
     "webpack-dev-server": "3.11.2"
   }
 }
+{
+  …
+  "homepage": "https://arvharan.github.io/scratch-extension-development/scratch/"
+}
