@@ -4,7 +4,7 @@
   "description": "Virtual Machine for Scratch 3.0",
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/LLK/scratch-vm#readme",
+  "homepage": "https://arvharan.github.io/scratch-extension-development/scratch/",
   "repository": {
     "type": "git",
     "url": "https://github.com/LLK/scratch-vm.git",
@@ -106,8 +106,4 @@
     "webpack-cli": "3.1.0",
     "webpack-dev-server": "3.11.2"
   }
-}
-{
-  …
-  "homepage": "https://arvharan.github.io/scratch-extension-development/scratch/"
 }
