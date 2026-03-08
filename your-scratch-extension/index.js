@@ -34,7 +34,7 @@ class Scratch3ArvuExtension {
     }
 
     getans ({PROMPT}) {
-        return fetch('http://192.168.1.88:11434/api/generate', {
+        return fetch('http://127.0.0.1:11434/api/generate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
