@@ -180,6 +180,8 @@ myFirstBlock ({ BOOK_NUMBER }) {
 
 Your code is now ready to test.
 
+> **Tip:** You can adapt this example to talk to a local Llama/Ministral API instead of fetching book data.  The provided `your-scratch-extension/index.js` has been updated with a second block called **ask Arvu [PROMPT]** that POSTs to `http://127.0.0.1:11434/api/generate`.  Make sure a compatible model server is running on your machine and that CORS is configured so the Scratch project can reach it from the browser.
+
 ---
 
 ## Launch a private test of your Scratch extension
