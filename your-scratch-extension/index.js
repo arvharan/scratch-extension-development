@@ -33,27 +33,28 @@ class Scratch3ArvuExtension {
         };
     }
 
-    async getans ({PROMPT}) {
-        try {
-            const response = await fetch('http://127.0.0.1:11434/api/generate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    model: 'ministral-3:3b',
-                    prompt: PROMPT,
-                    stream: false
-                })
-            });
-
+    getans ({PROMPT}) {
+        return fetch('http://127.0.0.1:11434/api/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'ministral-3:3b',
+                prompt: PROMPT,
+                stream: false
+            })
+        })
+        .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
             }
-
-            const data = await response.json();
+            return response.json();
+        })
+        .then((data) => {
             return data.response || data.text || '';
-        } catch (e) {
+        })
+        .catch((e) => {
             return 'Connection error – check the server URL/port.';
-        }
+        });
     }
 }
 
